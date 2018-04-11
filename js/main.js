@@ -31,7 +31,7 @@ function FlipCard(card, val) {
                 card_value = [];    // Clear both arrays
                 card_ID = [];
                 if (card_flipped == card_array.length) {  // Check if the whole board is cleared
-                    alert("Board cleared... generating new board");
+                    alert("Game complete! Push the 'OK' button to create a new game.");
                     document.getElementById('board').innerHTML = "";
                     newBoard();
                 }
