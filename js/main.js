@@ -1,7 +1,7 @@
 // Temporary array, just to check the working capacity, later will be graphical images instead
 var card_array = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F', 'G', 'G', 'H', 'H', 'I', 'I', 'J', 'J', 'K', 'K', 'L', 'L'];    
 var card_value = [];  
-var card_ID = [];    //needed to count opened cards as id[0], id[1] to flip them back 
+var card_ID = [];   
 var card_flipped = 0;  //counter
 
 // Method for card shuffle for card_array
@@ -17,8 +17,8 @@ Array.prototype.card_shuffle = function () {
 
 // Method for card flipping on click
 function FlipCard(card, val) {
-    if (card.innerHTML == "" && card_value.length < 2) { // If data of "card" is empty and current open cards less than 2
-        card.style.background = '#FFF';                  // only then card will open and be filled with value (str *62*)
+    if (card.innerHTML == "" && card_value.length < 2) { 
+        card.style.background = '#FFF';                
         card.innerHTML = val;
         if (card_value.length == 0) {           // No card is open
             card_value.push(val);
